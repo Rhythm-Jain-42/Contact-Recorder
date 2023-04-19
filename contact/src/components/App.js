@@ -6,10 +6,15 @@ import ContactList from "./ContactList";
 
 function App() {
 const [contacts, setContacts] = useState([]);
+
+const addContactHandler=(contact) =>{
+  console.log(contact);
+  setContacts(...contacts, contact);
+}
   return (
     <div className='ui container'>
       <Header />
-      <AddContact />
+      <AddContact addContactHandler={addContactHandler}/>
       <ContactList contacts={contacts}/>
     </div>
   );
