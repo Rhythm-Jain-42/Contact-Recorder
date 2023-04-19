@@ -12,7 +12,8 @@ class AddContact extends React.Component{
                 <form className="fui form">
                     <div className="field">
                         <label>Name</label>
-                        <input type="text" name="name" placeholder="Name" />
+                        <input type="text" name="name" placeholder="Name" onChange={(e)=>this.setState({name : e.target.value
+                        })}/>
                      </div>
                      <div className="field">
                         <label>Email</label>
